@@ -66,50 +66,50 @@ public class Handcricket {
         }
         else{
             System.out.println("Enter the runs");
-                while(w1!=0)
+            while(w1!=0)
+            {
+                ba=sc.nextInt();
+                bo=(int)(Math.random()*(6-0+1));
+                System.out.println(bo);
+                if(ba==bo)
                 {
-                    ba=sc.nextInt();
-                    bo=(int)(Math.random()*(6-0+1));
-                    System.out.println(bo);
-                    if(ba==bo)
-                    {
-                        w1--;
-                        System.out.println("HOWZATT!!");
-                    }
-                    else if (w1<=y-2 && bo==0) 
-                    sb+=6;                        
-                    else
-                    sb+=ba;
-                    System.out.println("Score: "+sb+" - "+(y-w1));
+                    w1--;
+                    System.out.println("HOWZATT!!");
                 }
-                System.out.println("Target: "+sb+"\nEnter the bowls");
-                w1=y;
-                while(w1!=0)
+                else if (w1<=y-2 && bo==0) 
+                sb+=6;                        
+                else
+                sb+=ba;
+                System.out.println("Score: "+sb+" - "+(y-w1));
+            }
+            System.out.println("Target: "+sb+"\nEnter the bowls");
+            w1=y;
+            while(w1!=0)
+            {
+                bo=sc.nextInt();
+                ba=(int)(Math.random()*(6-0+1));
+                System.out.println(ba);
+                if(ba==bo)
                 {
-                    bo=sc.nextInt();
-                    ba=(int)(Math.random()*(6-0+1));
-                    System.out.println(ba);
-                    if(ba==bo)
-                    {
-                        w1--;
-                        System.out.println("HOWZATT!!");
-                    }
-                    else if (w1<=y-2 && bo==0) 
-                    s+=6;                        
-                    else
-                    s+=ba;
-                    System.out.println("Score: "+s+" - "+(y-w1));
-                    if(sb<s)
-                    break;
+                    w1--;
+                    System.out.println("HOWZATT!!");
                 }
-                if(sb>s)
-                System.out.println("You won by "+(sb-s)+" runs");
-                else if(sb<s)
-                System.out.println("Computer won by "+w1+" wickets");
-                else{
-                    System.out.println("It's time for a SUPEROVER!!!");
-                    ob.superover(1,2);
-                }
+                else if (w1<=y-2 && bo==0) 
+                s+=6;                        
+                else
+                s+=ba;
+                System.out.println("Score: "+s+" - "+(y-w1));
+                if(sb<s)
+                break;
+            }
+            if(sb>s)
+            System.out.println("You won by "+(sb-s)+" runs");
+            else if(sb<s)
+            System.out.println("Computer won by "+w1+" wickets");
+            else{
+                System.out.println("It's time for a SUPEROVER!!!");
+                ob.superover(1,2);
+            }
         }
     }
     public static void main(String args[])
@@ -357,11 +357,8 @@ public class Handcricket {
                 else{
                     System.out.println("It's time for a SUPEROVER!!!");
                     ob.superover(1,2);
-                }
-                
+                }                
             }
         }
-
-    }
-    
+    }    
 }
