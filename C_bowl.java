@@ -58,7 +58,7 @@ public class C_bowl {
             break;
         }
         if(s>sb)
-        System.out.println("You won by "+(sb-s)+" runs");
+        System.out.println("You won by "+(s-sb)+" runs");
         else if(sb>s)
         System.out.println("Computer won by "+w1+" wickets");
         else{
